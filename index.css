@@ -1,5 +1,9 @@
 body {
-  background-color: #7c381d86;
+  background-color: rgb(152, 251, 152); /* Verde pastel */
+    color: #333333; /* Color de texto oscuro para contraste */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 20px; /* Espacio interior para separar el contenido */
+    margin: 0;
 }
 /* Container General WEB*/
 .ContainerLeader {
