@@ -1,16 +1,21 @@
 body {
-  background-color: rgb(152, 251, 152); /* Verde pastel */
+  background-color: #00712D ; /* Verde pastel */
     color: #333333; /* Color de texto oscuro para contraste */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    padding: 20px; /* Espacio interior para separar el contenido */
     margin: 0;
 }
+/*Container Navegacion Header*/
+.ContainerNavMenu{
+  margin: auto;
+  display: flex;
+  padding: 16px;
+  margin-top: 5px;/*Antes de quitar el borde, tienes que mirar si el Margin TOP de este DIV, TOCA QUITARLO BAJARLE.*/
+  border: 2px solid rgb(0, 21, 255);
+}
+
 /* Container General WEB*/
 .ContainerLeader {
   margin: auto;
-  max-width: 1200px;
   display: flex;
-  padding: 16px;
   justify-content: space-between;
   border: 2px solid rgb(0, 21, 255);
 }
@@ -50,7 +55,7 @@ body {
   color: #666;
   transition: .5s;
 }
-
+/*Hover da color a Boton Home */
 .StyleInicio a::before{
   content: '';
   position: absolute;
@@ -59,7 +64,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #4446e7;
+  background: #e744a6;
   transition: .5s;
   transform: scale(.9);
   z-index: -1;
@@ -67,15 +72,15 @@ body {
 
 .StyleInicio a:hover::before{
   transform: scale(1,1);
-  box-shadow: 0 0 15px #4446e7;
+  box-shadow: 0 0 15px #e744a6;
 }
 
 .StyleInicio a:hover{
-  color: #4446e7;
-  box-shadow: 0 0 5px #4446e7;
-  text-shadow: 0 0 5px #4446e7;
+  color: #e744a6;
+  box-shadow: 0 0 5px #e744a6;
+  text-shadow: 0 0 5px #e744a6;
 }
-
+/*Fin Hover Btn home*/
 .SearchCSS {
   border: 2px solid rgb(174, 255, 0);
   display: flex;
@@ -128,7 +133,6 @@ body {
   transition: all .7s ease;
 }
 /* FIN CSS SEARCH*/
-
 
 
 
