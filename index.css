@@ -1,31 +1,80 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 body {
   background-color: #00712D ; /* Verde pastel */
     color: #333333; /* Color de texto oscuro para contraste */
     margin: 0;
 }
 /*Container Navegacion Header*/
+header{
+  background: rgba(0,0,0,9 );
+  width: 100%;
+  position: fixed;/*CAMBIAR A FIXED*/
+  z-index: 100;
+}
 .ContainerNavMenu{
   margin: auto;
   display: flex;
-  padding: 16px;
-  margin-top: 5px;/*Antes de quitar el borde, tienes que mirar si el Margin TOP de este DIV, TOCA QUITARLO BAJARLE.*/
-  border: 2px solid rgb(0, 21, 255);
+  /* border: 2px solid rgb(0, 21, 255);BORDES DE CONTENEDO */
 }
-
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* float:left; */
+}
+nav ul{
+  display: flex;
+  justify-content: space-around; /* Distribuye uniformemente los elementos */
+  width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+  padding: 0;
+  margin: 0;
+  list-style: none;/*Elimina los marcadores predeterminados (viñetas o números) de los elementos de la lista.*/
+  overflow: hidden;/*Asegura que el contenedor se ajuste correctamente a los elementos flotantes dentro de él.*/
+}
+nav ul li{
+  flex: 1; /* Hace que cada elemento de la lista ocupe el mismo espacio */
+  text-align: center; /* Centra el texto dentro de cada elemento */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+nav ul li a{
+  display: block;/* Convertimos los elementos a(de la lista) en elementos bloque para manipular el padding */
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li:hover {
+  background: #3ead47;
+}
+/*FIN Container Navegacion Header*/
 /* Container General WEB*/
 .ContainerLeader {
   margin: auto;
   display: flex;
-  justify-content: space-between;
-  border: 2px solid rgb(0, 21, 255);
+  padding-top: 50px;
+  overflow: hidden;
+  
+  /* border: 2px solid rgb(0, 21, 255);BORDES DE CONTENEDO */
 }
 /* Container Titulo*/
 .ContainerTitulo {
-  justify-content: left;
-  padding: 16px;
+  display: flex;
+  justify-content: space-around; /* Distribuye uniformemente los elementos */
+  width: 100%; /* Asegura que la lista ocupe todo el ancho disponible */
+  padding: 0;
+  margin: 0;
   border: 2px solid rgb(174, 255, 0);
+  
 }
 /* DIV Titulo*/
+.ContainerContenido {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
 .Title {
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.819);
@@ -37,7 +86,7 @@ body {
   font-size: 55px
 }
 .StyleInicio{
-  border: 2px solid rgb(174, 255, 0);
+  /* border: 2px solid rgb(174, 255, 0); BORDES DE CONTENEDOR*/
   display: flex;
   align-items: center;
 }
@@ -64,7 +113,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #e744a6;
+  background: #2fc937;
   transition: .5s;
   transform: scale(.9);
   z-index: -1;
@@ -72,54 +121,62 @@ body {
 
 .StyleInicio a:hover::before{
   transform: scale(1,1);
-  box-shadow: 0 0 15px #e744a6;
+  box-shadow: 0 0 15px #2fc937;
 }
 
 .StyleInicio a:hover{
-  color: #e744a6;
-  box-shadow: 0 0 5px #e744a6;
-  text-shadow: 0 0 5px #e744a6;
+  color: #191717;
+  box-shadow: 0 0 5px #2fc937;
+  text-shadow: 0 0 5px #2fc937;
 }
 /*Fin Hover Btn home*/
 .SearchCSS {
-  border: 2px solid rgb(174, 255, 0);
+  /* border: 2px solid rgb(174, 255, 0); COLOR*/
   display: flex;
   align-items: center;
   justify-content: right;
   padding: 10px;
 }
+.SonCSS {
+  /* border: 2px solid rgb(174, 255, 0); */
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 10px;
+}
+
 .SearchCSS input {
-  border: 1px solid red;
+  border: 1px solid #2fc937;
   outline: none;
   box-sizing: border-box;
-  height: 50px;
+  height: 45px;
   width: 0;
   padding: 0 20px;
   color: black;
   border-radius: 50px;
   font-size: 20px;
-  transition: 1s ease;
 }
 .SearchCSS:hover input {
   width: 250px;
+  transition: .7s;
 }
 ::placeholder {
   color: gray;
 }
 .btn {
   position: absolute;
-  width: 45px;
+  width: 50px;
   height: 50px;
-  background-color: red;
+  background-color: #2fc937;
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
   margin-left: 8px;
-  transition: background-color .7s ease, transform .7s ease;
 
 }
 .btn:hover {
-  background-color: #b40707;
+  transition: .7s;
+  background-color: #333333;/*COLOR ROJO ANTERIOR b40707*/
   transform: scale(1.2);
 }
 .btn i {
@@ -130,85 +187,5 @@ body {
   font-size: 25px;
   color: white;
   width: 20;
-  transition: all .7s ease;
 }
 /* FIN CSS SEARCH*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .BotonSAFE {
-  border-radius: 25px;
-  background-color: rgb(28, 54, 34);
-  color: rgb(255, 255, 255);
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.ContainerPene {
-  display: flex;
-  justify-content: center;
-}
-
-.FG {
-  background-color: rgba(255, 255, 255, 0.697);
-  display: inline-bloc;
-  justify-content: center;
-
-}
-
-.ContainerFG {
-  display: flex;
-  justify-content: center;
-}
-
-.Nombre {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.email {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-#password {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 25px;
-  font-weight: bold;
-} */
