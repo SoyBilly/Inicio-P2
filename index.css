@@ -7,6 +7,18 @@ body {
     color: #333333; /* Color de texto oscuro para contraste */
     margin: 0;
 }
+/*  MEDIA MAX WIDTH
+@media (max-width: 768px) {
+  .ContainerContenido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .Title {
+    font-size: 35px;
+  }
+}         /*
 /*Container Navegacion Header*/
 header{
   background: rgba(0,0,0,9 );
@@ -55,7 +67,7 @@ nav ul li:hover {
 .ContainerLeader {
   margin: auto;
   display: flex;
-  padding-top: 50px;
+  padding-top: 60px;
   overflow: hidden;
   
   /* border: 2px solid rgb(0, 21, 255);BORDES DE CONTENEDO */
@@ -80,11 +92,11 @@ nav ul li:hover {
   background-color: rgba(255, 255, 255, 0.819);
   color: rgb(0, 0, 0);
   display: inline-block;
-  text-decoration: underline;
-  text-decoration-color: rgba(221, 255, 0, 0.71);
   text-align: center;
   font-size: 55px
 }
+
+
 .StyleInicio{
   /* border: 2px solid rgb(174, 255, 0); BORDES DE CONTENEDOR*/
   display: flex;
@@ -138,7 +150,7 @@ nav ul li:hover {
   padding: 10px;
 }
 .SonCSS {
-  /* border: 2px solid rgb(174, 255, 0); */
+ border: 2px solid rgb(174, 255, 0);
   display: flex;
   align-items: center;
   justify-content: right;
